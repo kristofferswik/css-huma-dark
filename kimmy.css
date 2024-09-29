@@ -1,316 +1,95 @@
-:host{
+:host {
     --fonts-default: inherit;
+    --brand-color: #953765;  /* Humas main brand color */
+    --hover-color: #a9527c ;
+    --dark-background: #262626; /* Dashboard background color like black */
+    --light-gray: #303030; /* Lighter dashboard color used for side panels */
+    --font-color: #FAFAF9; /* Font color for dark mode */
   }
-.voiceflow-chat {
-    background-color: #1e1e1e;
-    color: #fdb54b;
-    position: relative;
-    overflow: hidden;
-}
-
-.vrfc-widget--chat {
-    border-radius: 16px;
-}
-
-.vfrc-chat {
-    border-radius: 16px; 
-}
-
-/* Launcher button */
-.vfrc-launcher {
-    background-color: #632340;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Overlay */
-.vfrc-chat--overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Prompt */
-.vfrc-prompt {
-    background-color: #2c2c2c;
-    color: #fdb54b;
-    border-radius: 8px;
-}
-
-/* Header */
-.vfrc-header {
-    background-color: #632340;
-    color: #ffffff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    /* Rounded corners for header */
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-}
-
-.vfrc-assistant-info {
-    display: flex;
-    align-items: center;
-}
-
-.vfrc-assistant-info--title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-left: 10px;
-    color: #ffffff;
-}
-
-.vfrc-assistant-info--description {
-    font-size: 0.9em;
-    color: #dddddd;
-    margin-left: 10px;
-}
-
-/* Icons */
-.vfrc-icon {
-    fill: #fdb54b; /* Set icons to the yellow contrast color */
-}
-
-/* Chat dialog */
-.vfrc-chat--dialog {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    padding: 10px;
-    overflow-y: auto;
-    /* Adjust bottom padding to avoid overlap with footer */
-    padding-bottom: 70px; /* Adjust this value if necessary */
-}
-
-/* Spacer */
-.vfrc-chat--spacer {
-    background-color: #1e1e1e;
-}
-
-/* Session time and status */
-.vfrc-chat--session-time,
-.vfrc-chat--status {
-    color: #888888;
-    font-size: 0.8em;
-    text-align: center;
-    margin: 10px 0;
-}
-
-/* Message */
-.vfrc-message {
-    background-color: #2c2c2c;
-    color: #ffffff;
-    border-radius: 16px;
-    padding: 10px;
-    margin: 5px 0;
-    max-width: 80%;
-    word-wrap: break-word;
-}
-
-/* Assistant messages */
-.vfrc-system-response .vfrc-message {
-    background-color: #2c2c2c;
-    color: #ffffff;
-    align-self: flex-start;
-}
-
-/* User messages */
-.vfrc-user-response .vfrc-message {
-    background-color: #632340;
-    color: #ffffff;
-    align-self: flex-end;
-}
-
-/* Timestamp */
-.vfrc-timestamp {
-    color: #888888;
-    font-size: 0.8em;
-    text-align: right;
-    margin-top: 2px;
-}
-
-/* System response indicator */
-.vfrc-system-response--indicator {
-    border-left: 4px solid #fdb54b;
-    padding-left: 10px;
-}
-
-/* System response controls */
-.vfrc-system-response--controls {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-/* Buttons */
-.vfrc-button {
-    background-color: #632340; /* True purple color as fill */
-    color: #ffffff;
-    border: 2px solid #4b1a30; /* Darker purple color as border */
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.vfrc-button:hover {
-    background-color: #7a3a70; /* Slightly lighter purple on hover */
-    border-color: #3e1529; /* Even darker border on hover */
-}
-
-/* Images */
-.vfrc-image {
-    max-width: 100%;
-    border-radius: 16px;
-}
-
-.vfrc-image--background {
-    background-color: #2c2c2c;
-}
-
-/* Card */
-.vfrc-card--content {
-    background-color: #2c2c2c;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 16px;
-    margin: 10px 0;
-}
-
-.vfrc-card--header {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #fdb54b;
-}
-
-.vfrc-card--description {
-    color: #dddddd;
-    margin-top: 5px;
-}
-
-/* Carousel */
-.vfrc-carousel {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 16px;
-}
-
-.vfrc-carousel--button {
-    background-color: #fdb54b;
-    color: #1e1e1e;
-    border: none;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.vfrc-carousel--button:hover {
-    background-color: #eaa843;
-}
-
-
-.vfrc-chat-input {
-    /* Ensure the input field maintains consistent distance from the bottom */
-    position: absolute;
-    bottom: 20px; /* Adjust this value to change the distance */
-    width: calc(90% - 40px); /* Adjust width according to padding */
-    margin: 0 20px; /* Adjust side margins as needed */
-}
-
-/* Adjust padding in the input field */
-.vfrc-chat-input input {
-    padding: 10px; /* Adjust padding as needed */
-}
-
-/* Remove default watermark */
-.vfrc-footer--watermark {
-    display: none;
-}
-
-
-/* Ensure there are no light areas */
-.vfrc-system-response--list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.vfrc-system-response--actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-/* Adjust color for system responses */
-.vfrc-system-response {
-    background-color: transparent;
-    color: #ffffff;
-}
-
-/* Ensure all text is visible */
-.vfrc-system-response .vfrc-message {
-    color: #ffffff;
-}
-
-.vfrc-user-response {
-    background-color: transparent;
-    color: #ffffff;
-}
-
-/* Adjust elements with dark text on dark background */
-.vfrc-assistant-info--description {
-    color: #dddddd;
-}
-
-/* Adjust remaining elements for visibility */
-.vfrc-chat--status,
-.vfrc-chat--session-time {
-    color: #888888;
-}
-
-/* Adjust scrollbars for dark mode */
-.vfrc-chat--dialog::-webkit-scrollbar {
-    width: 8px;
-}
-
-.vfrc-chat--dialog::-webkit-scrollbar-thumb {
-    background-color: #632340;
-    border-radius: 4px;
-}
-
-.vfrc-chat--dialog::-webkit-scrollbar-track {
-    background-color: #1e1e1e;
-}
-
-/* Ensure links are visible */
-.vfrc-message a {
-    color: #fdb54b;
-    text-decoration: underline;
-}
-
-.vfrc-message a:hover {
-    color: #eaa843;
-}
-
-/* Set selection color */
-::selection {
-    background: #fdb54b;
-    color: #1e1e1e;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 600px) {
-    .vfrc-header,
-    .vf-footer {
-        padding: 8px;
-    }
-    .vfrc-assistant-info--title {
-        font-size: 1em;
-    }
-    .vfrc-button {
-        padding: 6px 12px;
-    }
-}
+  
+  .vfrc-launcher {
+      background-color: var(--brand-color);
+  }
+  
+  .vfrc-launcher:hover {
+      background-color: var(--hover-color);
+  }
+  
+  .vfrc-chat {
+      background-color: var(--dark-background);
+  }
+  
+  .vfrc-widget--chat {
+      max-height: 100% !important;
+  }
+  
+  .vfrc-header,
+  .vfrc-footer {
+      background-color: var(--brand-color);
+  }
+  
+  ::-webkit-scrollbar {
+      border-left: 1px solid var(--brand-color);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+      background-color: rgba(149, 54, 101, 0.3); /* Opacity added to the brand color */
+  }
+  
+  .vfrc-assistant-info--title {
+      color: var(--font-color);
+  }
+  
+  .vfrc-assistant-info--description,
+  .vfrc-chat--session-time,
+  .vfrc-timestamp,
+  .vfrc-footer--watermark {
+      color: rgba(250, 250, 249, 0.8); /* Font color with reduced opacity */
+  }
+  .vfrc-assistant-info--description a,
+  .vfrc-chat--session-time a,
+  .vfrc-timestamp a,
+  .vfrc-footer--watermark a {
+      color: var(--font-color);
+  }
+  .vfrc-message--chat {
+    background-color: var(--light-gray);
+    color: var(--font-color);
+  }
+  .vfrc-button--secondary {
+      background-color: var(--light-gray);
+      color: var(--font-color);
+      border-color: var(--brand-color);
+  }
+  
+  .vfrc-button--secondary:hover {
+      font-weight: 700;
+      border-color: var(--brand-color);
+      border: 2px;
+  }
+  
+  .vfrc-footer button.vfrc-button {
+      position: relative;
+      background-color: var(--brand-color) !important;
+  }
+  .vfrc-footer button.vfrc-button::after {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      inset: 0;
+      color: var(--font-color);
+      border: 2px;
+  }
+  .vfrc-footer .vfrc-chat-input--button .vfrc-bubble {
+      background-color: var(--brand-color);
+  }
+  .vfrc-prompt {
+      background-color: var(--brand-color);
+  }
+  .vfrc-prompt button {
+      color: var(--font-color);
+  }
+  .vfrc-prompt button:hover {
+      color: #efefef;
+  }
